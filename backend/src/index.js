@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const sequelize = require('./config/db');
+const userRouter = require('./routes/users');
 
 require('dotenv').config();
 
@@ -13,6 +14,7 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 app.use('/auth', authRouter);
+app.use('/users', userRouter);
 
 // Test route
 app.get('/', (req, res) => {
@@ -43,3 +45,8 @@ sequelize
 console.log("✅ Loaded environment variables:");
 console.log(process.env);
 
+// Error handler
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.status || 500).json({ error: err.message || 'Internal Server Error' });
+});
