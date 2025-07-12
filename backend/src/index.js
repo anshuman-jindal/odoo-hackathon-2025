@@ -7,6 +7,7 @@ require('dotenv').config();
 
 const authRouter = require('./routes/auth');
 const swapRouter = require('./routes/swapRequests');
+const ratingRouter = require('./routes/ratings');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use('/auth', authRouter);
 app.use('/users', userRouter);
 app.use('/swap-requests', swapRouter);
+app.use('/ratings', ratingRouter);
 
 // Test route
 app.get('/', (req, res) => {
