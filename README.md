@@ -4,9 +4,12 @@
 
 ## 👥 Team Hackstreet Boys
 
-Anshuman Jindal   
+Anshuman Jindal
+
 Lalnundika Darlong
+
 Pranav Sai Reddy Chevuru
+
 Devangee Shah
 
 ### 📝 Overview
