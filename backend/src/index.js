@@ -17,14 +17,26 @@ app.get('/', (req, res) => {
 });
 
 // Start server after DB connection
+// Import models so associations get registered:
+require('./models/User');
+require('./models/Skill');
+require('./models/UserSkill');
+require('./models/SwapRequest');
+require('./models/Rating');
+
+// Sync DB
 sequelize
-  .authenticate()
+  .sync({ alter: true })
   .then(() => {
-    console.log('✅ Database connected');
+    console.log('✅ Database & tables synced');
     app.listen(PORT, () =>
-      console.log(`🚀 Server listening on http://localhost:${PORT}`)
+      console.log(`🚀 Server running on http://localhost:${PORT}`)
     );
   })
   .catch(err => {
-    console.error('❌ Unable to connect to the database:', err);
+    console.error('❌ Sync error:', err);
   });
+
+console.log("✅ Loaded environment variables:");
+console.log(process.env);
+
