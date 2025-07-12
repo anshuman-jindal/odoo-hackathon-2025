@@ -1,8 +1,8 @@
-# 💡 odoo-hackathon-2025
+# odoo-hackathon-2025
 
-## 🧩 Problem Statement 1: Skill Swap Platform
+## Problem Statement 1: Skill Swap Platform
 
-## 👥 Team Hackstreet Boys
+## Team Hackstreet Boys
 
 Anshuman Jindal
 
@@ -12,13 +12,13 @@ Pranav Sai Reddy Chevuru
 
 Devangee Shah
 
-### 📝 Overview
+### Overview
 
 Develop a **Skill Swap Platform** — a mini application that enables users to list their skills and request others in return.
 
 ---
 
-### 🚀 Features
+### Features
 
 - **User Information**:
   - Name
@@ -42,7 +42,7 @@ Develop a **Skill Swap Platform** — a mini application that enables users to l
 
 ---
 
-### 🛡️ Admin Role
+### Admin Role
 
 - Reject inappropriate or spammy skill descriptions
 - Ban users who violate platform policies
