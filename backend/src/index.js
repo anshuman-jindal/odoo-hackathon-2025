@@ -9,6 +9,7 @@ const authRouter = require('./routes/auth');
 const swapRouter = require('./routes/swapRequests');
 const ratingRouter = require('./routes/ratings');
 const searchRouter = require('./routes/search');
+const adminRouter = require('./routes/admin');
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -21,6 +22,7 @@ app.use('/users', userRouter);
 app.use('/swap-requests', swapRouter);
 app.use('/ratings', ratingRouter);
 app.use('/search', searchRouter);
+app.use('/admin', adminRouter);
 
 // Test route
 app.get('/', (req, res) => {
@@ -34,6 +36,7 @@ require('./models/Skill');
 require('./models/UserSkill');
 require('./models/SwapRequest');
 require('./models/Rating');
+require('./models/Message');
 
 // Sync DB
 sequelize
