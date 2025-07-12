@@ -4,6 +4,11 @@
 
 ## 👥 Team Hackstreet Boys
 
+Anshuman Jindal   
+Lalnundika Darlong
+Pranav Sai Reddy Chevuru
+Devangee Shah
+
 ### 📝 Overview
 
 Develop a **Skill Swap Platform** — a mini application that enables users to list their skills and request others in return.
